@@ -42,7 +42,7 @@ body{
     width: 300px;
     height: 100%;
     background: var(--blue);
-    border-style: solid #fff);
+    border-style: solid #fff;
     transition: 0.5s;
     overflow: hidden;
 }
