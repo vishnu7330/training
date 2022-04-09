@@ -3,14 +3,14 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Best College of Education</title>
+    <title>Best Engineering College</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="banner">
-            <h2>The Best College of Education</h2>
+            <h2>Best Engineering College</h2>
         </div>
         <div class="navigation">
             <ul>
