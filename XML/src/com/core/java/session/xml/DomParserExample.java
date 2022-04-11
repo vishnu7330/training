@@ -18,7 +18,7 @@ public class DomParserExample {
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			
-			//parsing
+			//parsing - loading the xml file to memory
 			Document doc = dBuilder.parse(inputFile);
 			doc.getDocumentElement().normalize();
 			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
