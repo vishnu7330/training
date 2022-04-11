@@ -85,12 +85,11 @@ public class DepartmentDaoImpl implements DepartmentDao<Department, String> {
 		getCurrentSession().remove(entity);
 	}
 
-	@SuppressWarnings("unchecked")
 	public List<Department> findAll() {
-		CriteriaQuery<Department> query = getCurrentSession().getCriteriaBuilder().createQuery(Department.class);
-		query.select(query.from(Department.class));
-		Query q = getCurrentSession().createQuery(query);
-		List<Department> departments = q.getResultList();
+
+		List<Department> departments = getCurrentSession().createQuery("from Department", Department.class)
+				.getResultList();
+
 		return departments;
 	}
 
