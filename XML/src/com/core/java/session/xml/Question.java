@@ -20,7 +20,7 @@ public Question(int id, String questionname, List<Answer> answers) {
     this.answers = answers;  
 }  
 //Annotation
-@XmlAttribute  
+@XmlElement  
 public int getId() {  
     return id;  
 }  

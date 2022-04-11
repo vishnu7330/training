@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<question id="1">
+<question>
     <answers>
         <answername>java is a programming language</answername>
         <id>101</id>
@@ -10,5 +10,6 @@
         <id>102</id>
         <postedby>john</postedby>
     </answers>
+    <id>1</id>
     <qname>What is java?</qname>
 </question>
