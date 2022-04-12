@@ -25,7 +25,7 @@
                 <h2>Results</h2>
 
                 <form id="form">
-                    <input type="search" id="query" name="q" placeholder="Search...">
+                    <input type="search" id="query" name="rollno" placeholder="Search...">
                     <button>Search</button>
                 </form>
 
