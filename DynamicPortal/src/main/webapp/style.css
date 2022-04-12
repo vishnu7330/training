@@ -42,7 +42,7 @@ body{
     width: 300px;
     height: 100%;
     background: var(--blue);
-    border-style: solid #fff);
+    border-style: solid #fff;
     transition: 0.5s;
     overflow: hidden;
 }
@@ -151,3 +151,52 @@ ul {
     color: var(--black3);
 }
 
+.login
+{
+    width: 100%;
+	
+}
+
+.loginheading
+{
+    color: var(--blue);
+    margin: 60px auto 60px auto;
+    text-align: center;
+}
+
+.loginform
+{
+    display: grid;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    width: 300px;
+    /* Center horizontally*/
+    margin: 0 auto;
+}
+
+.loginform p
+{
+    margin: 20px;
+	color: var(--black2);
+}
+
+.submitbutton
+{
+    margin: 20px;
+}
+
+.resetbutton
+{
+    margin: 20px;
+}
+.buttons input
+{
+    background: var(--blue);
+    color: var(--white);
+    border-style: none;
+    border-color: #0689d4;
+    height: 30px;
+    width: 70px;
+    text-shadow: none;
+    border-radius: 20px;
+}
