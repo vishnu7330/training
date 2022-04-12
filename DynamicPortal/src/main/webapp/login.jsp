@@ -13,21 +13,23 @@
 	</div>
 
 	<div class="loginform">
-		<form action="j_security_check" method=post>
-			<p class="username">
-				<strong>User Name: </strong> <input type="text"
-					name="j_username" size="25">
-			</p>
-			<p class="password">
-				<strong>Password:  </strong> <input type="password"
-					size="25" name="j_password">
-			</p>
-			<p class="buttons">
-				<input class="submitbutton" type="submit" value="Submit">
-				<input class="resetbutton" type="reset"
-					value="Reset">
-			</p>
-		</form>
+		<div class="loginformdetails">
+			<form action="j_security_check" method=post>
+				<p class="username">
+					<strong>User Name: </strong> <input type="text"
+						name="j_username" size="25">
+				</p>
+				<p class="password">
+					<strong>Password:  </strong> <input type="password"
+						size="25" name="j_password">
+				</p>
+				<p class="buttons">
+					<input class="submitbutton" type="submit" value="Submit">
+					<input class="resetbutton" type="reset"
+						value="Reset">
+				</p>
+			</form>
+		</div>
 	</div>
 </div>
 
