@@ -13,7 +13,7 @@
 
 	<p>
 		Please enter a user name or password that is authorized to access this
-		application. <a href="/login.jsp">Try Again</a>
+		application. <a href="login.jsp">Try Again</a>
 	</p>
 </body>
 </html>
