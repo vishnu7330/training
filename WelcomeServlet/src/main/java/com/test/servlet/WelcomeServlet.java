@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,16 +15,24 @@ import javax.servlet.http.HttpServletResponse;
 		"/HelloWorld" })
 public class WelcomeServlet extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
 
 		System.out.println("Get method of Welcome Servlet");
-		resp.setContentType("text/html");// setting the content type
-		PrintWriter pw = resp.getWriter();// get the stream to write the data
+		response.setContentType("text/html");// setting the content type
+		PrintWriter pw = response.getWriter();// get the stream to write the data
 
 		// writing html in the stream
 		pw.println("<html><body>");
 		pw.println("Welcome to servlet");
 		pw.println("</body></html>");
+		
+		Cookie ck=new Cookie("user","testUser");//creating cookie object  
+		response.addCookie(ck);//adding cookie in the response  
+		
+		//delete cookie example
+//		Cookie ck=new Cookie("user","");//deleting value of cookie  
+//		ck.setMaxAge(0);//changing the maximum age to 0 seconds  
+//		response.addCookie(ck);//adding cookie in the response  
 
 		pw.close();// closing the stream
 	}
