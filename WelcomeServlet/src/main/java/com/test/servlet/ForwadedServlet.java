@@ -36,6 +36,7 @@ public class ForwadedServlet extends HttpServlet {
 
 		// writing html in the stream
 		pw.println("<html><body>");
+		pw.println("</br>");
 		pw.println("Welcome to forwaded servlet");
 		pw.println("</body></html>");
 

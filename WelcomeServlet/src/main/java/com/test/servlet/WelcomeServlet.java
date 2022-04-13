@@ -42,14 +42,15 @@ public class WelcomeServlet extends HttpServlet {
 		pw.println("</body></html>");
 
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("forward");
-		// ********* FORWARD **********
-//		requestDispatcher.forward(request, response);
 
 		// ********* INCLUDE **********
 //		requestDispatcher.include(request, response);
 
+		// ********* FORWARD **********
+		requestDispatcher.forward(request, response);
+
 		// ********* SEND-REDIRECT **********
-		response.sendRedirect("https://www.google.com/");
+//		response.sendRedirect("https://www.google.com/");
 
 		pw.close();// closing the stream
 	}
