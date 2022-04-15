@@ -29,13 +29,15 @@ String title = "Expression Language (EL) Example";
 		<jsp:useBean id="box" class="com.training.jsp.Box" />
 
 		<jsp:setProperty name="box" property="width" value="10" />
-		<jsp:setProperty name="box" property="length" value="10" />
+		<jsp:setProperty name="box" property="length" value="20" />
 
 		<p>
 			Box details.... <br>
-			Length : <jsp:getProperty name="box" property="length" />
+			Length : ${box.length}
 			<br> 
-			Width : <jsp:getProperty name="box" property="width" />
+			Width : ${box.width}
+			<br>
+			Area : ${box.length * box.width}
 		</p>
 	</div>
 
