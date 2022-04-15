@@ -6,7 +6,7 @@
 				pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n" />
 		</Console>
 		<File name="File"
-			fileName="C:\Users\tamil\OneDrive\Documents\Tamil\log4j2.log"
+			fileName="C:\Users\tamil\OneDrive\Documents\Tamil\log4jexample.log"
 			append="true">
 			<PatternLayout>
 				<Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
@@ -14,7 +14,7 @@
 		</File>
 	</Appenders>
 	<Loggers>
-		<Logger name="com.test" level="debug" additivity="true">
+		<Logger name="com.test" level="info" additivity="true">
 			<AppenderRef ref="File" />
 		</Logger>
 		<Root>
