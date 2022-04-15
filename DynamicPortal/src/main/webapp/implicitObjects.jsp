@@ -11,10 +11,10 @@
 	<!-- Implicit Object: out -->
 	<% out.print("Today is:   "+java.util.Calendar.getInstance().getTime()); %>
 
-	</br>
+	<br>
 	<!-- Implicit Object: session -->
 	<% session.setAttribute("user","testUser"); %>
 	<% out.print("Session accessed time:   " + session.getLastAccessedTime()); %>
-	</br>
+	<br>
 </body>
 </html>
