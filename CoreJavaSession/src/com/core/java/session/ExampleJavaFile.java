@@ -43,6 +43,9 @@ public class ExampleJavaFile {
 
 	/* Methods */
 
+	/**
+	 * This method will print the message received.
+	 */
 	public void printMessage() {
 		System.out.println("called from class method. " + getMessage());
 	}

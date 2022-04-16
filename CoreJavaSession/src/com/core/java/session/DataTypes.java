@@ -7,10 +7,10 @@ package com.core.java.session;
  */
 public class DataTypes {
 
-	// Size - 1 byte -> 128 to 127
+	// Size - 1 byte -> -128 to 127
 	public byte byteValue = 127;
 
-	// Size - 2 bytes -> 32,768 to 32,767
+	// Size - 2 bytes -> -32,768 to 32,767
 	public short shortValue = 32767;
 
 	// Size - 4 bytes -> -2,147,483,648 to 2,147,483,647
