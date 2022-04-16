@@ -1,0 +1,76 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+	<!-- This bean has been referred fron struts.xml file; So type it correctly; -->
+	<!-- Make scope prototype; This is really important. -->
+	<bean name="editEmployeeAction"
+		class="com.training.struts.spring.hibernate.controller.EditEmployeeAction"
+		scope="prototype">
+		<property name="employeeManager">
+			<ref bean="employeeManager" />
+		</property>
+	</bean>
+
+	<!-- These beans are injected automatically by spring context -->
+	<bean id="employeeDAO"
+		class="com.training.struts.spring.hibernate.dao.EmployeeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="employeeManager"
+		class="com.training.struts.spring.hibernate.service.EmployeeManagerImpl">
+		<property name="employeeDAO" ref="employeeDAO" />
+	</bean>
+
+	<!-- Configure jdbc.properties -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+		p:location="/WEB-INF/jdbc.properties" />
+
+	<!-- Data Source configuration -->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+		p:driverClassName="${MYSQLJDBC.driver}"
+		p:url="${MYSQLJDBC.url}" p:username="${MYSQLJDBC.username}"
+		p:password="${MYSQLJDBC.password}" />
+
+	<!-- Configure hibernate session factory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${MYSQLJDBC.dialect}</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- Run SQL queries in transactions -->
+	<tx:annotation-driven />
+
+
+</beans>
