@@ -22,9 +22,6 @@
 
 <body>
 	<div class="container">
-		<div class="banner">
-			<h2>Best Engineering College</h2>
-		</div>
 		<div class="navigation">
 			<ul>
 				<li><a href="departments.jsp">Departments</a></li>
@@ -33,6 +30,9 @@
 			</ul>
 		</div>
 		<div class="main">
+			<div class="banner">
+				<h2>Best Engineering College</h2>
+			</div>
 			<div class="departments">
 
 				<h2>Departments</h2>
@@ -45,14 +45,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						<% int i = 1; %>
+						<%
+						int i = 1;
+						%>
 						<c:forEach var="department" items="${departments.rows}">
 							<tr>
-								<td><%= i %></td>
+								<td><%=i%></td>
 								<td><c:out value="${department.id}" /></td>
 								<td><c:out value="${department.name}" /></td>
 							</tr>
-							<% i++; %>
+							<%
+							i++;
+							%>
 						</c:forEach>
 					</tbody>
 				</table>

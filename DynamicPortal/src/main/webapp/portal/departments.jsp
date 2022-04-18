@@ -12,9 +12,9 @@ String database = "portal";
 String userid = "root";
 String password = "@database4ME";
 try {
-Class.forName(driver);
+	Class.forName(driver);
 } catch (ClassNotFoundException e) {
-e.printStackTrace();
+	e.printStackTrace();
 }
 Connection connection = null;
 Statement statement = null;
@@ -32,9 +32,6 @@ ResultSet resultSet = null;
 
 <body>
 	<div class="container">
-		<div class="banner">
-			<h2>Best Engineering College</h2>
-		</div>
 		<div class="navigation">
 			<ul>
 				<li><a href="departments.jsp">Departments</a></li>
@@ -43,8 +40,10 @@ ResultSet resultSet = null;
 			</ul>
 		</div>
 		<div class="main">
+			<div class="banner">
+				<h2>Best Engineering College</h2>
+			</div>
 			<div class="departments">
-
 				<h2>Departments</h2>
 				<table class="departmentstable">
 					<thead class="departmentheader">
@@ -56,26 +55,26 @@ ResultSet resultSet = null;
 					</thead>
 					<tbody>
 						<%
-						try{
-						connection = DriverManager.getConnection(connectionUrl+database, userid, password);
-						statement=connection.createStatement();
-						String sql ="select * from departments";
-						resultSet = statement.executeQuery(sql);
-						int i = 1;
-						while(resultSet.next()){
-							System.out.println(" i = "+i);
+						try {
+							connection = DriverManager.getConnection(connectionUrl + database, userid, password);
+							statement = connection.createStatement();
+							String sql = "select * from departments";
+							resultSet = statement.executeQuery(sql);
+							int i = 1;
+							while (resultSet.next()) {
+								System.out.println(" i = " + i);
 						%>
 						<tr>
-							<td><%= i++ %></td>
-							<td><%=resultSet.getString("id") %></td>
-							<td><%=resultSet.getString("name") %></td>
+							<td><%=i++%></td>
+							<td><%=resultSet.getString("id")%></td>
+							<td><%=resultSet.getString("name")%></td>
 
 						</tr>
 						<%
 						}
-							connection.close();
+						connection.close();
 						} catch (Exception e) {
-							e.printStackTrace();
+						e.printStackTrace();
 						}
 						%>
 					</tbody>
