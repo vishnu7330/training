@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Spring - Struts - Hibernate Example</title>
+<title>Struts - Spring - Hibernate Example</title>
 <style>
 table.list {
 	border-collapse: collapse;
@@ -20,7 +20,7 @@ table.list, table.list td, table.list th {
 </head>
 <body>
 
-	<h2>Spring - Struts - Hibernate Example</h2>
+	<h2>Struts - Spring - Hibernate Example</h2>
 
 	<s:form method="post" action="add">
 		<table>
