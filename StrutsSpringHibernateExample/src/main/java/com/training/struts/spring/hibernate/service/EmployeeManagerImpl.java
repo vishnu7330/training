@@ -20,11 +20,17 @@ public class EmployeeManagerImpl implements EmployeeManager {
 	public void addEmployee(Employee employee) {
 		List<Address> addresses = new ArrayList<Address>();
 		Address address = new Address();
-		address.setId(555);
 		address.setCity("SFO");
+		address.setState("CA");
+		address.setStreet("Green park");
 		address.setZipCode("12345");
 		addresses.add(address);
+		
+		//add all addresses to the employee list
 		employee.setAddressList(addresses);
+		
+		//for Join column value
+		address.setEmployee(employee);
 		
 		employeeDAO.addEmployee(employee);
 	}
