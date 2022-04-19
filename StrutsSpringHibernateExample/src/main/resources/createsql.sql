@@ -7,3 +7,11 @@ CREATE TABLE EMPLOYEE
     EMAIL       VARCHAR(30),
     CREATED     TIMESTAMP DEFAULT NOW()
 );
+
+CREATE TABLE `portal`.`address` (
+  `id` INT NOT NULL,
+  `street` VARCHAR(45) NULL,
+  `city` VARCHAR(45) NULL,
+  `state` VARCHAR(45) NULL,
+  `zipcode` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));

@@ -1,9 +1,15 @@
 package com.training.struts.spring.hibernate.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +32,10 @@ public class Employee {
 
 	@Column(name = "TELEPHONE")
 	private String telephone;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "EMPLOYEE_ADDRESS", joinColumns = { @JoinColumn(name = "EMPLOYEE_ID") }, inverseJoinColumns = { @JoinColumn(name = "ADDRESS_ID") })
+	private List<Address> addressList;
 
 	// Setters and Getters
 	public Integer getId() {
@@ -66,5 +76,13 @@ public class Employee {
 
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
+	}
+
+	public List<Address> getAddressList() {
+		return addressList;
+	}
+
+	public void setAddressList(List<Address> addressList) {
+		this.addressList = addressList;
 	}
 }

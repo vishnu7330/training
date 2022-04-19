@@ -1,10 +1,12 @@
 package com.training.struts.spring.hibernate.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
 import com.training.struts.spring.hibernate.dao.EmployeeDAO;
+import com.training.struts.spring.hibernate.model.Address;
 import com.training.struts.spring.hibernate.model.Employee;
 
 public class EmployeeManagerImpl implements EmployeeManager {
@@ -16,6 +18,14 @@ public class EmployeeManagerImpl implements EmployeeManager {
 	@Override
 	@Transactional
 	public void addEmployee(Employee employee) {
+		List<Address> addresses = new ArrayList<Address>();
+		Address address = new Address();
+		address.setId(555);
+		address.setCity("SFO");
+		address.setZipCode("12345");
+		addresses.add(address);
+		employee.setAddressList(addresses);
+		
 		employeeDAO.addEmployee(employee);
 	}
 
