@@ -5,10 +5,10 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -18,7 +18,7 @@ public class Employee {
 
 	@Id
 	@Column(name = "ID")
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
 	@Column(name = "FIRSTNAME")
@@ -33,8 +33,7 @@ public class Employee {
 	@Column(name = "TELEPHONE")
 	private String telephone;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "EMPLOYEE_ADDRESS", joinColumns = { @JoinColumn(name = "EMPLOYEE_ID") }, inverseJoinColumns = { @JoinColumn(name = "ADDRESS_ID") })
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee", cascade = CascadeType.ALL)
 	private List<Address> addressList;
 
 	// Setters and Getters
