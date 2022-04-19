@@ -1,8 +1,9 @@
 package com.core.java.session;
 
-public class Account {
+public abstract class Account {
 
 	private int balance;
+	public static final int interestRate = 10;
 
 	public int getBalance() {
 		return balance;
@@ -16,5 +17,11 @@ public class Account {
 	public String toString() {
 		return "Account [balance=" + balance + "]";
 	}
+
+	public int getInterestRate() {
+		return interestRate;
+	}
+
+	abstract void setInterestRate(int interestRate);
 	
 }
