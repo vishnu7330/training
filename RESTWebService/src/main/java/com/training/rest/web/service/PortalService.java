@@ -9,12 +9,17 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.training.portal.model.Department;
 import com.training.portal.service.DepartmentService;
 
 @Path("/portal")
 public class PortalService {
 
+	private static Logger logger = LogManager.getLogger(PortalService.class);
+	
 	@Inject
 	private DepartmentService departmentService;
 
@@ -23,9 +28,9 @@ public class PortalService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getDepartments() {
 
-		System.out.println("in getDepartments()");
+		logger.info("in getDepartments()");
 		List<Department> departments = departmentService.getDepartments();
-		System.out.println(" departments : " + departments);
+		logger.debug(" departments : " + departments);
 		return Response.ok().entity(departments).build();
 	}
 

@@ -2,6 +2,8 @@ package com.training.portal.dao;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,10 +12,9 @@ import org.hibernate.cfg.Configuration;
 
 import com.training.portal.model.Department;
 
-import jakarta.persistence.Query;
-import jakarta.persistence.criteria.CriteriaQuery;
-
 public class DepartmentDaoImpl implements DepartmentDao<Department, String> {
+	
+	private static Logger logger = LogManager.getLogger(DepartmentDaoImpl.class);
 
 	private Session currentSession;
 
@@ -87,9 +88,10 @@ public class DepartmentDaoImpl implements DepartmentDao<Department, String> {
 
 	public List<Department> findAll() {
 
+		logger.info("inside findAll()");
 		List<Department> departments = getCurrentSession().createQuery("from Department", Department.class)
 				.getResultList();
-
+		logger.debug(departments);
 		return departments;
 	}
 
