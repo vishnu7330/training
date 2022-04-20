@@ -1,6 +1,9 @@
 package com.core.java.session;
 
 public interface InterfaceExample {
+	
+	int SENIOR_CITIZEN_AGE = 60; //by default final static - constants
+	
 
 	public String getName(); //by default abstract methods
 	

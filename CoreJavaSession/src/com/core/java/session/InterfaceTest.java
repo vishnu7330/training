@@ -8,6 +8,8 @@ public class InterfaceTest {
 		
 		bankApi.getInterestRate();
 		
+		int seniorCitizenAge = InterfaceExample.SENIOR_CITIZEN_AGE;
+		
 	}
 
 }

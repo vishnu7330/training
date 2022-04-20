@@ -1,7 +1,7 @@
 package com.core.java.session;
 
 public class InterfaceImplExample implements InterfaceExample {
-
+	
 	@Override
 	public String getName() {
 		return null;
