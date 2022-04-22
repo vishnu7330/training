@@ -22,9 +22,9 @@ public class MongodbTest {
 
 			// Create Document
 			Document doc = new Document("name", "Peter John");
-			doc.append("id", 12);
 			doc.append("age", 20);
 			doc.append("department", "Engineering");
+			doc.append("grade", "A");
 
 			// Insert Data
 			table.insertOne(doc);
