@@ -4,7 +4,7 @@ import org.bson.types.ObjectId;
 
 public class Address {
 
-//	private ObjectId id;
+	private ObjectId id;
 	
 	private String street;
 
@@ -46,11 +46,11 @@ public class Address {
 		this.zipCode = zipCode;
 	}
 
-//	public ObjectId getId() {
-//		return id;
-//	}
-//
-//	public void setId(ObjectId id) {
-//		this.id = id;
-//	}
+	public ObjectId getId() {
+		return id;
+	}
+
+	public void setId(ObjectId id) {
+		this.id = id;
+	}
 }
