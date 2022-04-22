@@ -9,7 +9,6 @@ public class Test {
 	
 	// default
 	public Test() {
-		System.out.println("*** inside constructtor ***");
 		//initialization - default
 		x = 50;
 		y = 100;

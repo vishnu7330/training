@@ -43,14 +43,39 @@ public class CollectionFramework {
 
 		ArrayList<Dog> dogs = new ArrayList<Dog>();
 
+		//putting the objects into the list
 		dogs.add(dog1);
 		dogs.add(dog2);
 		dogs.add(dog3);
 		dogs.add(dog4);
 		dogs.add(dog5);
 
+		
 		System.out.println(dogs);
+		
+		//taking out the objects from the list
+		for (Dog dog : dogs) {
+			if(dog.getAge() == 10) {
+				
+			} else {
+				System.out.println(dog);
+			}
+		}
+		
+		removeFirstDog(dogs);
+		Dog lastDog = new Dog("Last dog");
+		addLastDog(lastDog, dogs);
+		
+		System.out.println("after test method: " + dogs);
+	}
 
+
+	private static void addLastDog(Dog lastDog, ArrayList<Dog> dogs) {
+		dogs.add(lastDog);
+	}
+
+	private static void removeFirstDog(ArrayList<Dog> dogs) {
+		dogs.remove(0);
 	}
 
 	/** Set **/
