@@ -28,10 +28,26 @@ public class DateAndTime {
 		final Duration duration = Duration.between(from, to);
 		System.out.println("duration : " + duration);
 
+		long then = System.currentTimeMillis();
+		pause();
+		long now = System.currentTimeMillis();
+
+		System.out.println("Method execution time: " + (now - then) / 1000 + " seconds");
+
 		/** deprecated **/
 //		java.util.Date
 //		java.util.Calendar
 
+	}
+
+	private static void pause() {
+		try {
+			//milliseconds
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
