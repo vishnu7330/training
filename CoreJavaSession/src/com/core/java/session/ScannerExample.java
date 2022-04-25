@@ -16,7 +16,7 @@ public class ScannerExample {
 		Scanner scan = null;
 		try {
 			scan = new Scanner(new File(
-					"C:\\Users\\tamil\\eclipse-workspace-java\\CoreJavaSession\\src\\com\\core\\java\\session\\myNumbers.txt"));
+					"C:\\Users\\tamil\\git\\training\\CoreJavaSession\\src\\com\\core\\java\\session\\myNumbers.txt"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
