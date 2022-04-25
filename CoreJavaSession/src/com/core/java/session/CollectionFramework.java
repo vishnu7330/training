@@ -125,20 +125,25 @@ public class CollectionFramework {
 	private static void queueExample() {
 		/** Double ended queue **/
 		Deque<String> queue = new ArrayDeque<>();
+		
 		queue.add("Puppy");
 		queue.add("Johnny");
 		queue.add("Rosi");
 		queue.add("Jimmy");
 		queue.add("Walter");
+		
 		System.out.println("head:" + queue.element()); // throws exception if queue is empty
 		System.out.println("head:" + queue.peek()); // returns null if queue is empty
 		System.out.println("iterating the queue elements:");
+		
 		Iterator<String> itr = queue.iterator();
 		while (itr.hasNext()) {
 			System.out.println(itr.next());
 		}
+		//taking out from queue
 		queue.remove();
 		queue.poll();
+		
 		System.out.println("after removing two elements:");
 		Iterator<String> itr2 = queue.iterator();
 		while (itr2.hasNext()) {
