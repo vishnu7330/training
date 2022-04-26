@@ -19,7 +19,7 @@ public class CopyFileAndException {
 
 		try {
 			//reading
-			in = new FileInputStream("input.txt");
+			in = new FileInputStream("C:\\Users\\tamil\\git\\training\\CoreJavaSession\\src\\com\\core\\java\\session\\input.txt");
 			//writing
 			out = new FileOutputStream("output.txt");
 
@@ -29,6 +29,7 @@ public class CopyFileAndException {
 			}
 
 		} catch (IOException e) {
+			e.printStackTrace();
 			//based on the project requirement
 			System.out.println("Please provide a input.txt file");
 		} finally {
