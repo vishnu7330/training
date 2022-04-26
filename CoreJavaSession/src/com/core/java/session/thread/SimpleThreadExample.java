@@ -9,18 +9,25 @@ package com.core.java.session.thread;
  *
  */
 public class SimpleThreadExample extends Thread {
+	
+	public SimpleThreadExample(String name) {
+		super(name);
+	}
 
 	public void run() {
 		// infinite loop
 		for (int i = 0; i < 5;) {
-			System.out.println(" ******** inside run() *********");
+			System.out.println(" ******** inside run() ********* "+ Thread.currentThread().getName());
 		}
 	}
 
 	public static void main(String[] args) {
 
-		Thread thread = new SimpleThreadExample();
-		thread.start();
+		Thread thread1 = new SimpleThreadExample("Thread *** 1 ***");
+		thread1.start();
+		
+		Thread thread2 = new SimpleThreadExample("Thread *** 2 ***");
+		thread2.start();
 
 		// infinite loop
 		for (int i = 0; i < 5;) {

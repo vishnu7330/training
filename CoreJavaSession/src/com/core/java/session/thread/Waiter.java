@@ -4,8 +4,8 @@ public class Waiter implements Runnable{
     
     private Message msg;
     
-    public Waiter(Message m){
-        this.msg=m;
+    public Waiter(Message msg){
+        this.msg = msg;
     }
 
     @Override
