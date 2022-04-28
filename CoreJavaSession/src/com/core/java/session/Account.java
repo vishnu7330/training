@@ -6,6 +6,7 @@ public abstract class Account {
 	public static final int interestRate = 10;
 
 	public int getBalance() {
+		System.out.print(false);
 		return balance;
 	}
 
