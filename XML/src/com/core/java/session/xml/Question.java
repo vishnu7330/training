@@ -9,10 +9,15 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 //Annotation
 @XmlRootElement  
 public class Question {  
+	
 private int id;  
 private String questionname;  
 private List<Answer> answers;  
+
+
 public Question() {}  
+
+
 public Question(int id, String questionname, List<Answer> answers) {  
     super();  
     this.id = id;  
