@@ -1,10 +1,10 @@
 package com.test.dbconnection;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import java.sql.Statement;
 
 public class JDBCExample {
@@ -20,12 +20,15 @@ public class JDBCExample {
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sample", "root", "@database4ME");
 			// here sample is database name, root is username and password
 
+			// ************ Using Statement *********//
 			Statement stmt = con.createStatement();
 
 			ResultSet rs = stmt.executeQuery("select * from emp");
-			while (rs.next())
+			while (rs.next()) {
 				System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3));
+			}
 
+			// ************ Using Prepared Statement *************//
 			PreparedStatement prepStmt = con.prepareStatement(SQL_INSERT);
 			prepStmt.setInt(1, 15);
 			prepStmt.setString(2, "Joseph");
@@ -36,6 +39,17 @@ public class JDBCExample {
 			prepStmt.execute();
 
 			System.out.println("Row inserted");
+
+			// ************ Using Stored Procedure ***************//
+			String storedProcedure = "{CALL GetAllEmployees()}";
+			CallableStatement callStmt = con.prepareCall(storedProcedure);
+
+			ResultSet callResult = callStmt.executeQuery();
+
+			System.out.println("****** Stored Procedure results ********");
+			while (callResult.next()) {
+				System.out.println(callResult.getInt(1) + "  " + callResult.getString(2) + "  " + callResult.getString(3));
+			}
 
 			// at last close the connection
 			con.close();
