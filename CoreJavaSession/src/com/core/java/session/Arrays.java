@@ -24,6 +24,24 @@ public class Arrays {
 		for (int i = 0; i < animals.length; i++) {
 			System.out.println(" Array index i = " + i + " age = " + animals[i].getAge());
 		}
+
+		// Multi dimentional arrays example
+		multiDimensionalArrays();
+	}
+
+	public static void multiDimensionalArrays() {
+		// Two dimensional array:
+		int[][] twoDimensionalArray = new int[10][20];
+
+		//Initialization – Syntax:
+		//array_name[row_index][column_index] = value;
+		twoDimensionalArray[0][0] = 1;
+		twoDimensionalArray[9][19] = 200;
+
+		// Three dimensional array:
+		int[][][] threeDimensionalArray = new int[10][20][30];
+
+		System.out.println(twoDimensionalArray);
 	}
 
 }
