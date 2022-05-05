@@ -18,21 +18,21 @@ public class FirstServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType("text/html");
-		PrintWriter pwriter = response.getWriter();
+		PrintWriter out = response.getWriter();
 
 		String name = request.getParameter("userName");
 		String password = request.getParameter("userPassword");
-		pwriter.print("Hello " + name);
-		pwriter.print("</br>");
-		pwriter.print("Your Password is: " + password);
-		pwriter.print("</br>");
+		out.print("Hello " + name);
+		out.print("</br>");
+		out.print("Your Password is: " + password);
+		out.print("</br>");
 		HttpSession session = request.getSession();
 		
 		//Set values to the session
 		session.setAttribute("uname", name);
 		session.setAttribute("upass", password);
-		pwriter.print("<a href='welcome'>view details</a>");
-		pwriter.close();
+		out.print("<a href='welcome'>view details</a>");
+		out.close();
 
 	}
 }
