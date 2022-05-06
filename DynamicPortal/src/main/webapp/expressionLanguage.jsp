@@ -47,7 +47,7 @@ String title = "Expression Language (EL) Example";
 		<p>${header["Sec-CH-UA-Platform"]}</p>
 		<p>${header["Sec-CH-UA"]}</p>
 	</div>
-	<!-- EL accessing HTTP request header object properties -->
+	<!-- EL accessing HTTP request parameter properties -->
 	<div align="center">
 		<h2> HTTP Request parameter</h2>
 		<p>${param["name"]}</p>
