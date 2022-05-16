@@ -9,9 +9,8 @@
 <body>
   <h1>Spring MVC application example</h1>
   <hr>
-
   <h2>Your name is ${name}</h2>
-  
+
   <h2>Employee Name is ${employee.name} and role is ${employee.role}</h2>
 
 </body>
