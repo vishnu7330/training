@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.training.springmvc.model.Employee;
+
 @Controller
 public class HelloController {
 
@@ -16,7 +18,14 @@ public class HelloController {
 
    @PostMapping("/hello")
    public String sayHello(@RequestParam("name") String name, Model model) {
+	  Employee emp = new Employee();
+	  emp.setName("Mike Sherrard");
+	  emp.setRole("DEVELOPER");
+	  
       model.addAttribute("name", name);
+      
+      model.addAttribute("employee" , emp);
+      
       return "hello";
    }
 }
