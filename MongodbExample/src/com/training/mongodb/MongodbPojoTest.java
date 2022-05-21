@@ -10,6 +10,8 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.result.DeleteResult;
 
 public class MongodbPojoTest {
 
@@ -42,6 +44,8 @@ public class MongodbPojoTest {
 
 			// insert into MongoDB
 			collection.insertOne(student);
+			
+			//collection.deleteOne(Filters.eq("name", "Mike Sherrard"));
 
 		}
 	}
