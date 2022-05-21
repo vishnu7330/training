@@ -45,7 +45,7 @@ public class MongodbPojoTest {
 			// insert into MongoDB
 			collection.insertOne(student);
 			
-//			collection.deleteOne(Filters.eq("name", "Mike Sherrard"));
+			//collection.deleteOne(Filters.eq("name", "Mike Sherrard"));
 
 		}
 	}
