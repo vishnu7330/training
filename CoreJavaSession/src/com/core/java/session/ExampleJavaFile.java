@@ -60,6 +60,10 @@ public class ExampleJavaFile {
 
 		/* Calling method using Object */
 		exampleClass.printMessage();
+		
+		exampleClass.setMessage("new message");
+		
+		exampleClass.printMessage();
 
 		Date date = new Date();
 		System.out.println(date.toString());
