@@ -12,7 +12,7 @@ public class ConstructorExample {
 
 	// Overloading Constructor
 	public ConstructorExample(int x) {
-		System.out.println("inside ** Constructor **");
+		System.out.println("inside ** Overloaded Constructor **");
 		this.x = x;
 	}
 
