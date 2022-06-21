@@ -8,10 +8,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.training</groupId>
-	<artifactId>AuthenticationAuthorizationExample</artifactId>
+	<artifactId>LdapAuthenticationAuthorizationExample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>AuthenticationAuthorizationExample</name>
-	<description>Example project for Authentication and Authorization</description>
+	<description>Example project for LDAP Authentication and Authorization</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -68,11 +68,14 @@
 			<artifactId>javax.servlet.jsp.jstl-api</artifactId>
 			<version>1.2.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
 			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 	</dependencies>
 

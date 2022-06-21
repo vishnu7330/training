@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AuthenticationAuthorizationExampleApplication {
+public class LdapAuthenticationAuthorizationExampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AuthenticationAuthorizationExampleApplication.class, args);
+		SpringApplication.run(LdapAuthenticationAuthorizationExampleApplication.class, args);
 	}
 
 }
