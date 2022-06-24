@@ -14,6 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "WelcomeServlet", description = "Servlet with Annotation", urlPatterns = { "/Welcome",
 		"/HelloWorld" })
 public class WelcomeServlet extends HttpServlet {
+	
+	@Override
+	public void init() throws ServletException {
+		
+		System.out.println("init method called");
+	}
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
 
@@ -23,7 +30,7 @@ public class WelcomeServlet extends HttpServlet {
 
 		// writing html in the stream
 		pw.println("<html><body>");
-		pw.println("Welcome to servlet");
+		pw.println("Welcome to servlet " + req.getParameter("username"));
 		pw.println("</body></html>");
 		
 		Cookie ck=new Cookie("user","testUser");//creating cookie object  
@@ -62,5 +69,10 @@ public class WelcomeServlet extends HttpServlet {
 //		response.sendRedirect("https://www.google.com/");
 
 		pw.close();// closing the stream
+	}
+	
+	@Override
+	public void destroy() {
+		System.out.println("destroy method called");
 	}
 }
