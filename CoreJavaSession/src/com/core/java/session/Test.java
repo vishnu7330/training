@@ -63,7 +63,11 @@ public class Test {
 	}
 
 	public void setX(int x) {
-		this.x = x;
+		if( x > 0) {
+			this.x = x;
+		} else {
+			System.out.println("Age cannot be negative");
+		}
 	}
 
 	public int getY() {
