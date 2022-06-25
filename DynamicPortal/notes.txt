@@ -1,0 +1,6 @@
+http://localhost:8080/DynamicPortal/portal/departments.jsp
+
+username: testuser
+password: portal
+
+C:\Training\apache-tomcat-9.0.55\conf\tomcat-users.xml
