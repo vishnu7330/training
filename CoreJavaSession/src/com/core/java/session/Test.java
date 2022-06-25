@@ -7,6 +7,10 @@ public class Test {
 	private int x;
 	private int y;
 	
+	public static int count = 10;
+	
+	public static final double SENIOR_CITIZEN_INTEREST_RATE = .09;
+	
 	// default
 	public Test() {
 		//initialization - default
@@ -94,6 +98,11 @@ public class Test {
 	@Override
 	public String toString() {
 		return "Test [x=" + x + ", y=" + y + "]";
+	}
+	
+	
+	public static String getMessage() {
+		return "this is test message";
 	}
 
 }
