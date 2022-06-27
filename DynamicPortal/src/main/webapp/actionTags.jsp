@@ -5,7 +5,7 @@
 <body>
 	<h2>this is index page</h2>
 
-	<jsp:forward page="printdate.jsp">
+	<jsp:forward page="beans.jsp">
 		<jsp:param name="name" value="Test User" />
 	</jsp:forward>
 
