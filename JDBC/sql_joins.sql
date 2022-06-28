@@ -1,3 +1,4 @@
+/***** Create Customers table *****/
 CREATE TABLE `training`.`customers` (
   `id` INT NOT NULL,
   `name` VARCHAR(45) NULL,
@@ -6,7 +7,8 @@ CREATE TABLE `training`.`customers` (
   `street` VARCHAR(45) NULL,
   `zipcode` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
-  
+
+/***** Insert sample data to Customers table *****/
 INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (1, 'John Joseph', 'CA', 'San Francisco', '155 4th St', '94103');
 
 INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (2, 'Mike Sherrard', 'CA', 'Union City', '4934  Maplewood', '90004');
@@ -29,7 +31,7 @@ INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zi
 
 INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (11, 'Madison Huff', 'NE', 'Bellevue', '11516 Maass Rd', '68123');
 
-
+/***** Create Orders table *****/
 CREATE TABLE `training`.`orders` (
   `id` INT NOT NULL,
   `customer_id` INT NULL,
@@ -42,6 +44,7 @@ CREATE TABLE `training`.`orders` (
     ON DELETE CASCADE
     ON UPDATE NO ACTION);
 
+/***** Insert sample data to Orders table *****/
 INSERT INTO `training`.`orders` (`id`, `customer_id`, `order_date`) VALUES (10308, 2, NOW());
 INSERT INTO `training`.`orders` (`id`, `customer_id`, `order_date`) VALUES (10365, 3, NOW());
 INSERT INTO `training`.`orders` (`id`, `customer_id`, `order_date`) VALUES (10383, 4, NOW());
@@ -53,23 +56,23 @@ INSERT INTO `training`.`orders` (`id`, `customer_id`, `order_date`) VALUES (1065
 INSERT INTO `training`.`orders` (`id`, `customer_id`, `order_date`) VALUES (10426, 2, NOW());
 INSERT INTO `training`.`orders` (`id`, `customer_id`, `order_date`) VALUES (10751, 2, NOW());
 
-***** INNER JOIN *****
+/***** INNER JOIN *******/
 SELECT Orders.id, Customers.name, Orders.order_date
 FROM Orders
 INNER JOIN Customers ON Orders.customer_id=Customers.id;
 
 
-***** LEFT (OUTER) JOIN *****
+/***** LEFT (OUTER) JOIN *******/
 SELECT Orders.id, Customers.name, Orders.order_date
 FROM Orders
 LEFT JOIN Customers ON Orders.customer_id=Customers.id;
 
-***** RIGHT (OUTER) JOIN *****
+/***** RIGHT (OUTER) JOIN *******/
 SELECT Orders.id, Customers.name, Orders.order_date
 FROM Orders
 RIGHT JOIN Customers ON Orders.customer_id=Customers.id;
 
-***** FULL (OUTER) JOIN *****
+/***** FULL (OUTER) JOIN *******/
 SELECT Orders.id, Customers.name, Orders.order_date
 FROM Orders
 LEFT JOIN Customers ON Orders.customer_id=Customers.id
