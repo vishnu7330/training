@@ -5,7 +5,7 @@ public class WrapperClasses {
 	public static void main(String[] args) {
 
 		// int myInt = 5;
-		Integer myInt = 5;
+		Integer myInt = Integer.valueOf(5);
 
 		// double myDouble = 5.99;
 		Double myDouble = 5.99;
@@ -23,6 +23,8 @@ public class WrapperClasses {
 		System.out.println("char value from Character Wrapper -> " + myChar.charValue());
 
 		System.out.println("boolean value from Boolean Wrapper -> " + flag.booleanValue());
+		
+		int intValue = myInt.intValue();
 		
 		// flag.booleanValue() return type is boolean
 		boolean test = flag.booleanValue();

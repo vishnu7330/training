@@ -33,15 +33,20 @@ public class Arrays {
 		// Two dimensional array:
 		int[][] twoDimensionalArray = new int[10][20];
 
-		//Initialization – Syntax:
-		//array_name[row_index][column_index] = value;
+		// Initialization – Syntax:
+		// array_name[row_index][column_index] = value;
 		twoDimensionalArray[0][0] = 1;
 		twoDimensionalArray[9][19] = 200;
 
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 20; j++) {
+				System.out.println(twoDimensionalArray[i][j]);
+			}
+		}
 		// Three dimensional array:
 		int[][][] threeDimensionalArray = new int[10][20][30];
 
-		System.out.println(twoDimensionalArray);
+		// System.out.println(twoDimensionalArray[9][19]);
 	}
 
 }
