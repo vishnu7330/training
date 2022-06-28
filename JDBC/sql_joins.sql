@@ -1,3 +1,4 @@
+/* Schema name: training */
 /***** Create Customers table *****/
 CREATE TABLE `training`.`customers` (
   `id` INT NOT NULL,
