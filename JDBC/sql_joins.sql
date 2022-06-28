@@ -19,6 +19,16 @@ INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zi
 
 INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (6, 'David Smith', 'IA', 'Coralville', '2451 2nd Street', '52241');
 
+INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (7, 'Ellie Clark', 'NY', 'New York', '20 Cooper Square', '10003');
+
+INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (8, 'Phoebe Harris', 'IL', 'Naperville', '207 South Washington', '60540');
+
+INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (9, 'Lilly Snyder', 'MN', 'Minneapolis', '2451 2nd Street', '55416');
+
+INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (10, 'Zuri Hayden', 'TX', 'Houston', '5174 Richmond Avenue', '77056');
+
+INSERT INTO `training`.`customers` (`id`, `name`, `state`, `city`, `street`, `zipcode`) VALUES (11, 'Madison Huff', 'NE', 'Bellevue', '11516 Maass Rd', '68123');
+
 
 CREATE TABLE `training`.`orders` (
   `id` INT NOT NULL,
