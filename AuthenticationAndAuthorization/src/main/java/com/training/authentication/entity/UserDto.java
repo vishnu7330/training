@@ -3,6 +3,8 @@ package com.training.authentication.entity;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import com.training.authentication.ValidEmail;
+
 public class UserDto {
 	@NotNull
 	@NotEmpty
@@ -17,6 +19,7 @@ public class UserDto {
 	private String password;
 	private String matchingPassword;
 
+	@ValidEmail
 	@NotNull
 	@NotEmpty
 	private String email;
