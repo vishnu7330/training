@@ -75,7 +75,7 @@ public class AppController {
 		return "registration";
 	}
 
-	@RequestMapping(value = "/process_register", method = RequestMethod.POST)
+	@PostMapping("/process_register")
 	public ModelAndView registerUserAccount(@ModelAttribute("user") @Valid UserDto userDto, HttpServletRequest request,
 			Errors errors) {
 		ModelAndView mav = new ModelAndView("registration");

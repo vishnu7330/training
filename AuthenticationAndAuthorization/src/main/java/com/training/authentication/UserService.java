@@ -32,6 +32,7 @@ public class UserService implements IUserService {
 		user.setLastname(userDto.getLastName());
 		user.setPassword(passwordEncoder.encode(userDto.getPassword()));
 		user.setUsername(userDto.getEmail());
+		user.setEnabled(true);
 		Set<Role> roles = new HashSet<Role>();
 		roles.add(new Role("USER"));
 		user.setRoles(roles);
