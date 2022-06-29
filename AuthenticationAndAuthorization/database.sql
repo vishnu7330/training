@@ -4,11 +4,11 @@ INSERT INTO `roles` (`name`) VALUES ('EDITOR');
 INSERT INTO `roles` (`name`) VALUES ('ADMIN');
 
 
-INSERT INTO `users` (`username`, `password`, `enabled`) VALUES ('patrick', '$2a$10$cTUErxQqYVyU2qmQGIktpup5chLEdhD2zpzNEyYqmxrHHJbSNDOG.', b'1');
-INSERT INTO `users` (`username`, `password`, `enabled`) VALUES ('alex', '$2a$10$.tP2OH3dEG0zms7vek4ated5AiQ.EGkncii0OpCcGq4bckS9NOULu', b'1');
-INSERT INTO `users` (`username`, `password`, `enabled`) VALUES ('john', '$2a$10$E2UPv7arXmp3q0LzVzCBNeb4B4AtbTAGjkefVDnSztOwE7Gix6kea', b'1');
-INSERT INTO `users` (`username`, `password`, `enabled`) VALUES ('namhm', '$2a$10$GQT8bfLMaLYwlyUysnGwDu6HMB5G.tin5MKT/uduv2Nez0.DmhnOq', b'1');
-INSERT INTO `users` (`username`, `password`, `enabled`) VALUES ('admin', '$2a$10$IqTJTjn39IU5.7sSCDQxzu3xug6z/LPU6IF0azE/8CkHCwYEnwBX.', b'1');
+INSERT INTO `users` (`username`, `password`, `enabled`, `firstname`, `lastname`) VALUES ('patrick', '$2a$10$cTUErxQqYVyU2qmQGIktpup5chLEdhD2zpzNEyYqmxrHHJbSNDOG.', b'1','patrick','sam');
+INSERT INTO `users` (`username`, `password`, `enabled`, `firstname`, `lastname`) VALUES ('alex', '$2a$10$.tP2OH3dEG0zms7vek4ated5AiQ.EGkncii0OpCcGq4bckS9NOULu', b'1','alex','thomas');
+INSERT INTO `users` (`username`, `password`, `enabled`, `firstname`, `lastname`) VALUES ('john', '$2a$10$E2UPv7arXmp3q0LzVzCBNeb4B4AtbTAGjkefVDnSztOwE7Gix6kea', b'1','john','joseph');
+INSERT INTO `users` (`username`, `password`, `enabled`, `firstname`, `lastname`) VALUES ('namhm', '$2a$10$GQT8bfLMaLYwlyUysnGwDu6HMB5G.tin5MKT/uduv2Nez0.DmhnOq', b'1','namhm','shah');
+INSERT INTO `users` (`username`, `password`, `enabled`, `firstname`, `lastname`) VALUES ('admin', '$2a$10$IqTJTjn39IU5.7sSCDQxzu3xug6z/LPU6IF0azE/8CkHCwYEnwBX.', b'1','product','admin');
 
 
 
