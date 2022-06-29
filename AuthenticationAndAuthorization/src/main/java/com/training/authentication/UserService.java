@@ -19,6 +19,9 @@ public class UserService implements IUserService {
 	private UserRepository userRepository;
 
 	@Autowired
+	private RoleRepository roleRepository;
+
+	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 
 	@Override
@@ -34,7 +37,7 @@ public class UserService implements IUserService {
 		user.setUsername(userDto.getEmail());
 		user.setEnabled(true);
 		Set<Role> roles = new HashSet<Role>();
-		roles.add(new Role("USER"));
+		roles.add(roleRepository.getRoleByRolename("USER"));
 		user.setRoles(roles);
 
 		return userRepository.save(user);
