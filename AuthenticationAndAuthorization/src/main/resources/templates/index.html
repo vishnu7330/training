@@ -26,6 +26,9 @@
 		<div sec:authorize="hasAnyAuthority('CREATOR', 'ADMIN')">
 			<a href="new">Create New Product</a>
 		</div>
+		<div sec:authorize="hasAnyAuthority('ADMIN')">
+			<a href="/user/registration">Create New User</a>
+		</div>
 
 		<br /> <br />
 		<table class="table table-bordered table-striped" style="width: 25%">

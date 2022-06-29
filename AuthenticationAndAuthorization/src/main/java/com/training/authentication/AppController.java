@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.training.authentication.entity.UserDto;
+
 @Controller
 public class AppController {
 	@Autowired
@@ -54,5 +56,12 @@ public class AppController {
 		service.delete(id);
 		
 		return "redirect:/";
+	}
+	
+	@RequestMapping("/user/registration")
+	public String showRegistrationForm(Model model) {
+		UserDto userDto = new UserDto();
+	    model.addAttribute("user", userDto);
+	    return "registration";
 	}
 }

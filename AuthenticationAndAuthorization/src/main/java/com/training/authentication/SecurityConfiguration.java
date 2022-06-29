@@ -33,14 +33,13 @@ public class SecurityConfiguration {
 	}
 
 	@Bean
-	@Order(1)
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 				.antMatchers("/").hasAnyAuthority("USER", "CREATOR", "EDITOR", "ADMIN")
 				.antMatchers("/new").hasAnyAuthority("ADMIN", "CREATOR")
 				.antMatchers("/edit/**").hasAnyAuthority("ADMIN", "EDITOR")
 				.antMatchers("/delete/**").hasAuthority("ADMIN")
-				.anyRequest().authenticated()
+				.antMatchers("/user/registration/**").hasAuthority("ADMIN")
 				.and().formLogin().permitAll()
 				.and().logout().permitAll()
 				.and().exceptionHandling().accessDeniedPage("/403");
@@ -48,6 +47,7 @@ public class SecurityConfiguration {
 	}
 
 	@Bean
+	@Order(1)
 	public WebSecurityCustomizer webSecurityCustomizer() throws Exception {
 		return (web) -> web.ignoring().antMatchers("/images/**", "/js/**");
 	}
