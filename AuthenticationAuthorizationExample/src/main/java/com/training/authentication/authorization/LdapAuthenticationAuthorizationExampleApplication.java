@@ -8,6 +8,7 @@ public class LdapAuthenticationAuthorizationExampleApplication {
 
 	
 	public static void main(String[] args) {
+		System.out.println("Starting app");
 		SpringApplication.run(LdapAuthenticationAuthorizationExampleApplication.class, args);
 	}
 
