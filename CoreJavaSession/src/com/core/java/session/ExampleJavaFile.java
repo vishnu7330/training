@@ -56,14 +56,14 @@ public class ExampleJavaFile {
 		System.out.println("This is called from main() method...");
 
 		/* Creating Objects */
-		ExampleJavaFile exampleClass = new ExampleJavaFile();
+		ExampleJavaFile exampleObject = new ExampleJavaFile();
 
 		/* Calling method using Object */
-		exampleClass.printMessage();
+		exampleObject.printMessage();
 		
-		exampleClass.setMessage("new message");
+		exampleObject.setMessage("new message");
 		
-		exampleClass.printMessage();
+		exampleObject.printMessage();
 
 		Date date = new Date();
 		System.out.println(date.toString());
