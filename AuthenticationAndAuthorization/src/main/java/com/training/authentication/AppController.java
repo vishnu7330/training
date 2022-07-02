@@ -2,18 +2,16 @@ package com.training.authentication;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.Errors;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -28,7 +26,7 @@ public class AppController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping("/")
+	@GetMapping("/")
 	public String viewHomePage(Model model) {
 		List<Product> listProducts = service.listAll();
 		model.addAttribute("listProducts", listProducts);
@@ -36,7 +34,7 @@ public class AppController {
 		return "index";
 	}
 
-	@RequestMapping("/new")
+	@GetMapping("/new")
 	public String showNewProductForm(Model model) {
 		Product product = new Product();
 		model.addAttribute("product", product);
@@ -44,14 +42,14 @@ public class AppController {
 		return "new_product";
 	}
 
-	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	@PostMapping(value = "/save")
 	public String saveProduct(@ModelAttribute("product") Product product) {
 		service.save(product);
 
 		return "redirect:/";
 	}
 
-	@RequestMapping("/edit/{id}")
+	@GetMapping("/edit/{id}")
 	public ModelAndView showEditProductForm(@PathVariable(name = "id") Long id) {
 		ModelAndView mav = new ModelAndView("edit_product");
 
@@ -61,7 +59,7 @@ public class AppController {
 		return mav;
 	}
 
-	@RequestMapping("/delete/{id}")
+	@GetMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable(name = "id") Long id) {
 		service.delete(id);
 
@@ -76,16 +74,26 @@ public class AppController {
 	}
 
 	@PostMapping("/process_register")
-	public ModelAndView registerUserAccount(@ModelAttribute("user") @Valid UserDto userDto, HttpServletRequest request,
-			Errors errors) {
-		ModelAndView mav = new ModelAndView("registration");
+	public String registerUserAccount(@ModelAttribute("user") @Valid UserDto userDto, BindingResult result,
+			Model model) {
+
+		if (result.hasErrors()) {
+			return "registration";
+		}
+
+		if (!userDto.getPassword().equals(userDto.getMatchingPassword())) {
+			model.addAttribute("message", "Passwords do not match.");
+			return "registration";
+		}
+
 		try {
 			User registered = userService.registerNewUserAccount(userDto);
 		} catch (UserAlreadyExistException uaeEx) {
-			mav.addObject("message", "An account for that username/email already exists.");
-			return mav;
+			model.addAttribute("message", "An account for this username/email already exists.");
+			return "registration";
 		}
 
-		return new ModelAndView("successRegister", "user", userDto);
+		model.addAttribute("user", userDto);
+		return "successRegister";
 	}
 }
