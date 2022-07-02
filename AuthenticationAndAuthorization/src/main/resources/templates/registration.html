@@ -10,46 +10,47 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div align="center">
 	<h1 th:text="#{label.user.form.title}">form</h1>
 	<form th:action="@{/process_register}" th:object="${user}"
 		method="POST" enctype="utf8" style="width: 30%">
 		<div>
-			<label th:text="#{label.user.firstName}">first</label> <input
+			<label th:text="#{label.user.firstName}" style="text-align: left; display: inline-block; width: 150px;">first</label> <input
 				th:field="*{firstName}" /> <span
 				th:each="error: ${#fields.errors('firstName')}" th:text="${error}"
 				class="alert alert-danger" style="margin-top: 15px; padding: 0;">Validation error</span>
 		</div>
 		<div>
-			<label th:text="#{label.user.lastName}">last</label> <input
+			<label th:text="#{label.user.lastName}" style="text-align: left; display: inline-block; width: 150px;">last</label> <input
 				th:field="*{lastName}" /> <span
 				th:each="error : ${#fields.errors('lastName')}" th:text="${error}"
 				class="alert alert-danger" style="margin-top: 15px; padding: 0;">Validation error</span>
 		</div>
 		<div>
-			<label th:text="#{label.user.email}">email</label> <input
+			<label th:text="#{label.user.email}" style="text-align: left; display: inline-block; width: 150px;">email</label> <input
 				type="email" th:field="*{email}" /> <span
 				th:each="error : ${#fields.errors('email')}" th:text="${error}"
 				class="alert alert-danger" style="margin-top: 15px; padding: 0;">Validation error</span>
 		</div>
 		<div>
-			<label th:text="#{label.user.password}">password</label> <input
+			<label th:text="#{label.user.password}" style="text-align: left; display: inline-block; width: 150px;">password</label> <input
 				type="password" th:field="*{password}" /> <span
 				th:each="error : ${#fields.errors('password')}" th:text="${error}"
 				class="alert alert-danger" style="margin-top: 15px; padding: 0;">Validation error</span>
 		</div>
 		<div>
-			<label th:text="#{label.user.confirmPass}">confirm</label> <input
+			<label th:text="#{label.user.confirmPass}" style="text-align: left; display: inline-block; width: 150px;">confirm</label> <input
 				type="password" th:field="*{matchingPassword}" /> <span
 				th:each="error : ${#fields.errors('matchingPassword')}"
 				th:text="${error}" class="alert alert-danger" style="margin-top: 15px; padding: 0;">Validation
 				error</span>
 		</div>
-		<button type="submit" th:text="#{label.user.form.submit}">submit</button>
+		<button type="submit" th:text="#{label.user.form.submit}" >submit</button>
 		<br>
 		<p th:text=${message} style="color:#FF0000">message</p>
 	</form>
 
 	<a th:href="@{/}" th:text="#{label.user.form.loginLink}">products</a>
-	
+</div>
 </body>
 </html>
