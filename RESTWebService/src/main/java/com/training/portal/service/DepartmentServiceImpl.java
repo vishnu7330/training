@@ -9,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 
 import com.training.portal.dao.DepartmentDao;
 import com.training.portal.model.Department;
-import com.training.rest.web.service.PortalService;
 
 public class DepartmentServiceImpl implements DepartmentService {
 

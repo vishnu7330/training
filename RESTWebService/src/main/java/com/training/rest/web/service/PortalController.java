@@ -16,9 +16,9 @@ import com.training.portal.model.Department;
 import com.training.portal.service.DepartmentService;
 
 @Path("/portal")
-public class PortalService {
+public class PortalController {
 
-	private static Logger logger = LogManager.getLogger(PortalService.class);
+	private static Logger logger = LogManager.getLogger(PortalController.class);
 	
 	@Inject
 	private DepartmentService departmentService;
