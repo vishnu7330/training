@@ -6,6 +6,9 @@ import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Java Collection means a single unit of objects. Java Collection framework
@@ -41,8 +44,7 @@ public class CollectionFramework {
 		Dog dog4 = new Dog("Johnny");
 		Dog dog5 = new Dog("Rosi");
 
-		ArrayList<Dog> dogs = new ArrayList<Dog>();
-
+		List<Dog> dogs = new ArrayList<Dog>();
 		//putting the objects into the list
 		dogs.add(dog1);
 		dogs.add(dog2);
@@ -70,11 +72,11 @@ public class CollectionFramework {
 	}
 
 
-	private static void addLastDog(Dog lastDog, ArrayList<Dog> dogs) {
+	private static void addLastDog(Dog lastDog, List<Dog> dogs) {
 		dogs.add(lastDog);
 	}
 
-	private static void removeFirstDog(ArrayList<Dog> dogs) {
+	private static void removeFirstDog(List<Dog> dogs) {
 		dogs.remove(0);
 	}
 
@@ -86,7 +88,7 @@ public class CollectionFramework {
 		Dog dog4 = new Dog("Johnny");
 		Dog dog5 = new Dog("Rosi");
 
-		HashSet<Dog> dogs = new HashSet<Dog>();
+		Set<Dog> dogs = new HashSet<Dog>();
 
 		dogs.add(dog1);
 		dogs.add(dog2);
@@ -94,12 +96,12 @@ public class CollectionFramework {
 		dogs.add(dog4);
 		dogs.add(dog5);
 
-		System.out.println(dogs);
+		System.out.println("Set output -> " + dogs);
 	}
 
 	/** Map **/
 	private static void mapExample() {
-		HashMap<String, Dog> dogs = new HashMap<>();
+		Map<String, Dog> dogs = new HashMap<>();
 		Dog dog1 = new Dog("Puppy");
 		Dog dog2 = new Dog("Johnny");
 		Dog dog3 = new Dog("Rosi");
