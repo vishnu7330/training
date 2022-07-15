@@ -27,6 +27,9 @@ public class CopyFileAndException {
 			while ((c = in.read()) != -1) {
 				out.write(c);
 			}
+			
+			//alternate way
+			//in.transferTo(out);
 
 		} catch (IOException e) {
 			e.printStackTrace();
