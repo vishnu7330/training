@@ -18,7 +18,7 @@ public class GarbageCollection {
 		gc3 = null;
 
 		// anonymous object
-		new GarbageCollection();
+		new GarbageCollection().toString();
 
 		System.out.println("Calling System.gc()");
 		System.gc();
