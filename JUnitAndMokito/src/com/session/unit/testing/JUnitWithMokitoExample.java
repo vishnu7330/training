@@ -20,7 +20,7 @@ import org.mockito.Mockito;
 /**
  * The Class JUnitServiceTestExample.
  */
-public class JUnitServiceTestExample {
+public class JUnitWithMokitoExample {
 
 	/**
 	 * Test1.
