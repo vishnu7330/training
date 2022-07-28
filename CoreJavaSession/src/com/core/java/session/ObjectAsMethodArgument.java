@@ -6,10 +6,6 @@ public class ObjectAsMethodArgument {
 
 	public static void main(String[] args) {
 		
-		Test test = new Test();
-		
-		test.setBalance(-100);
-
 		Account account = new SBIAccount();
 		
 		
