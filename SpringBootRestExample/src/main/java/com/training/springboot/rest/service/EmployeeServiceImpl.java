@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.training.springboot.rest.model.Employee;
 import com.training.springboot.rest.repository.EmployeeRepository;
+import com.training.springboot.rest.service.exception.EmployeeNotFoundException;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -28,12 +29,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee getEmployee(Long id) {
-		Employee employee = null;
-		Optional<Employee> employeeRef = employeeRepository.findById(id);
-		if (employeeRef.isPresent()) {
-			employee = employeeRef.get();
-		}
-		return employee;
+		return employeeRepository.findById(id).orElseThrow(() -> new EmployeeNotFoundException(id));
 	}
 
 	@Override
