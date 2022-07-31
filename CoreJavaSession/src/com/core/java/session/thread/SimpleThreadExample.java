@@ -24,12 +24,12 @@ public class SimpleThreadExample extends Thread {
 	public static void main(String[] args) {
 
 		Thread thread1 = new SimpleThreadExample("Thread *** 1 ***");
-		thread1.setDaemon(true);
+		//thread1.setDaemon(true);
 		thread1.start();
 
 		Thread thread2 = new SimpleThreadExample("Thread *** 2 ***");
-		thread2.setDaemon(true);
-		thread2.setPriority(MAX_PRIORITY);
+		//thread2.setDaemon(true);
+		//thread2.setPriority(MAX_PRIORITY);
 		thread2.start();
 
 		// infinite loop
