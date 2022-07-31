@@ -43,6 +43,11 @@ public class DateAndTime {
 //		java.util.Date
 //		java.util.Calendar
 
+		zonedDateTime();
+
+	}
+
+	private static void zonedDateTime() {
 		ZonedDateTime zdt = null;
 		Instant instant = Instant.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ISO_TIME;
@@ -86,7 +91,6 @@ public class DateAndTime {
 		// India time - another way
 		ZonedDateTime gmt = ZonedDateTime.now(ZoneId.of("GMT+05:30"));
 		System.out.println("GMT+05:30 -> " + gmt);
-
 	}
 
 	private static void pause() {
