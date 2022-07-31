@@ -9,7 +9,7 @@ package com.core.java.session.thread;
  *
  */
 public class SimpleThreadExample extends Thread {
-	
+
 	public SimpleThreadExample(String name) {
 		super(name);
 	}
@@ -17,16 +17,19 @@ public class SimpleThreadExample extends Thread {
 	public void run() {
 		// infinite loop
 		for (int i = 0; i < 5;) {
-			System.out.println(" ******** inside run() ********* "+ Thread.currentThread().getName());
+			System.out.println(" ******** inside run() ********* " + Thread.currentThread().getName());
 		}
 	}
 
 	public static void main(String[] args) {
 
 		Thread thread1 = new SimpleThreadExample("Thread *** 1 ***");
+		thread1.setDaemon(true);
 		thread1.start();
-		
+
 		Thread thread2 = new SimpleThreadExample("Thread *** 2 ***");
+		thread2.setDaemon(true);
+		thread2.setPriority(MAX_PRIORITY);
 		thread2.start();
 
 		// infinite loop
