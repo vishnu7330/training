@@ -14,7 +14,7 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private String email;
-	private Long departmendId;
+	private Long departmentId;
 
 	public Long getEmployeeId() {
 		return employeeId;
@@ -48,11 +48,11 @@ public class Employee {
 		this.email = email;
 	}
 
-	public Long getDepartmendId() {
-		return departmendId;
+	public Long getDepartmentId() {
+		return departmentId;
 	}
 
-	public void setDepartmendId(Long departmendId) {
-		this.departmendId = departmendId;
+	public void setDepartmentId(Long departmentId) {
+		this.departmentId = departmentId;
 	}
 }
