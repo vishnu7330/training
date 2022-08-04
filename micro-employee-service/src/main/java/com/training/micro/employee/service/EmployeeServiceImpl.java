@@ -30,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		response.setEmployee(employee);
 
 		Department department = restTemplate
-				.getForObject("http://DEPARTMENT-SERVICE:9001/departments/" + employee.getDepartmentId(), Department.class);
+				.getForObject("http://DEPARTMENT-SERVICE/departments/" + employee.getDepartmentId(), Department.class);
 		response.setDepartment(department);
 
 		return response;
