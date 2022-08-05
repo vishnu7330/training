@@ -4,6 +4,17 @@ server:
 spring:
     application:
         name: API-GATEWAY
+    cloud:
+        gateway:
+            routes:
+              - id: EMPLOYEE-SERVICE
+                uri: lb://EMPLOYEE-SERVICE
+                predicates:
+                   - Path=/employees/**
+              - id: DEPARTMENT-SERVICE
+                uri: lb://DEPARTMENT-SERVICE
+                predicates:
+                   - Path=/departments/**
 
 eureka:
    client:
