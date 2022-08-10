@@ -1,0 +1,5 @@
+C:\Training\kafka\config\server.properties
+log.dirs=C:/Training/kafka/logs
+
+C:\Training\kafka\config\zookeeper.properties
+dataDir=C:/Training/kafka/data

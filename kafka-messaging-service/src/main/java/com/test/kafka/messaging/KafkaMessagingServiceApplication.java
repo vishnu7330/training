@@ -19,6 +19,7 @@ public class KafkaMessagingServiceApplication implements ApplicationRunner {
 	private KafkaTemplate<String, String> kafkaTemplate;
 
 	public void sendMessage(String msg) {
+		System.out.println("Sending message");
 		kafkaTemplate.send("weatherreport", msg);
 	}
 
@@ -29,6 +30,7 @@ public class KafkaMessagingServiceApplication implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
+		System.out.println("run() method called");
 		sendMessage("Weather is 40 degrees");
 	}
 
