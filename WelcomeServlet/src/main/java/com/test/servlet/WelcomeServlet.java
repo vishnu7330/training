@@ -57,13 +57,13 @@ public class WelcomeServlet extends HttpServlet {
 		pw.println("Post method of Welcome servlet");
 		pw.println("</body></html>");
 
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("forward");
+//		RequestDispatcher requestDispatcher = request.getRequestDispatcher("forward");
 
 		// ********* INCLUDE **********
 //		requestDispatcher.include(request, response);
 
 		// ********* FORWARD **********
-		requestDispatcher.forward(request, response);
+//		requestDispatcher.forward(request, response);
 
 		// ********* SEND-REDIRECT **********
 //		response.sendRedirect("https://www.google.com/");
