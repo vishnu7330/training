@@ -12,6 +12,7 @@
 </head>
 <body>
 	<h2>Custom Tag Library example</h2>
+	<ex:Header/>
 	<ex:Hello />
 </body>
 </html>

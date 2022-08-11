@@ -19,4 +19,21 @@
 		<body-content>empty</body-content>
 		
 	</tag>
+	
+	<tag>
+	
+		<name>Header</name>
+		
+		<tag-class>com.training.jsp.custom.tag.HeaderTag</tag-class>
+		
+		<!-- You specify the type of a tag’s body content using the body-content 
+			attribute: bodycontent="empty | scriptless | tagdependent" You must declare 
+			the body content of tags that do not accept a body as empty. For tags that 
+			have a body there are two options. Body content containing custom and standard 
+			tags and HTML text is specified as scriptless. All other types of body content 
+			(for example, SQL statements passed to the query tag) is specified as tagdependent. 
+			If no attribute is specified, the default is scriptless. -->
+		<body-content>empty</body-content>
+		
+	</tag>
 </taglib>

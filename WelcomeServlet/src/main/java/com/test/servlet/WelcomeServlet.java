@@ -26,12 +26,12 @@ public class WelcomeServlet extends HttpServlet {
 
 		System.out.println("Get method of Welcome Servlet");
 		response.setContentType("text/html");// setting the content type
-		PrintWriter pw = response.getWriter();// get the stream to write the data
+		PrintWriter out = response.getWriter();// get the stream to write the data
 
 		// writing html in the stream
-		pw.println("<html><body>");
-		pw.println("Welcome to servlet " + req.getParameter("username"));
-		pw.println("</body></html>");
+		out.println("<html><body>");
+		out.println("Welcome to servlet " + req.getParameter("username"));
+		out.println("</body></html>");
 		
 		Cookie ck=new Cookie("user","testUser");//creating cookie object  
 		response.addCookie(ck);//adding cookie in the response  
@@ -41,7 +41,7 @@ public class WelcomeServlet extends HttpServlet {
 //		ck.setMaxAge(0);//changing the maximum age to 0 seconds  
 //		response.addCookie(ck);//adding cookie in the response  
 
-		pw.close();// closing the stream
+		out.close();// closing the stream
 	}
 
 	@Override
