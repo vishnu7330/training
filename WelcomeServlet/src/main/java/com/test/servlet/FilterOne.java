@@ -27,3 +27,15 @@ public class FilterOne implements Filter {
 	public void destroy() {
 	}
 }
+/*
+Examples that have been identified for this design are: 
+1.Authentication Filters 
+2.Logging and Auditing Filters 
+3.Image conversion Filters 
+4.Data compression Filters 
+5.Encryption Filters 
+6.Tokenizing Filters 
+7.Filters that trigger resource access events 
+8.XSL/T filters 
+9.Mime-type chain Filter 
+*/
