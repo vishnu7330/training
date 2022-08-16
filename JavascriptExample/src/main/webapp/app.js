@@ -27,7 +27,7 @@ function changeContentWithAjax() {
 
 
 $(document).ready(function() {
-
+	console.log("page loading");
 	alert("on load");
 	$('#mycontent').text("Loading...");
 
