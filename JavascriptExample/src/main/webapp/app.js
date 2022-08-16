@@ -21,6 +21,7 @@ function changeContentWithAjax() {
 		{
 			success: function(data, status, xhr) {    // success callback function
 				$('#mycontent').text(data);
+				console.log("HTTP status: " + status);
 			}
 		});
 }
