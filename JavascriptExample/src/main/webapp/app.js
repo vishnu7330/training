@@ -26,15 +26,15 @@ function changeContentWithAjax() {
 		});
 }
 
-function changeCSSWithJavascript(){
+function changeCSSWithJavascript() {
 	document.getElementById("mycontent2").style.fontSize = "25px";
 	document.getElementById("mycontent2").style.color = "green";
 	document.getElementById("mycontent2").style.backgroundColor = "yellow";
 }
 
-function changeCSSWithJQuery(){
+function changeCSSWithJQuery() {
 	/* $('#mycontent').css('color','red'); */
-	
+
 	$('#mycontent3').addClass("content");
 }
 
@@ -42,6 +42,14 @@ function changeCSSWithJQuery(){
 $(document).ready(function() {
 	console.log("page loading");
 	alert("on load");
-	$('#mycontent').text("Loading...");
+	$('#mycontent1').text("Loading...");
+
+
+	$("#hide").click(function() {
+		$('#mycontent4').hide();
+	});
+	$("#show").click(function() {
+		$('#mycontent4').show();
+	});
 
 });
