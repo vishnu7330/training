@@ -3,22 +3,43 @@
 <head>
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 <script src="app.js"></script>
+
+<link href="style.css" rel="stylesheet">
+
 </head>
 <body>
 	<p>Welcome to JavaScript</p>
 	<form>
 		<input type="button" value="click" onclick="msg()" />
 	</form>
-	<p id="mycontent"></p>
+	<p id="mycontent1"></p>
+	<h3>Change Content</h3>
 	<form>
-		<input type="button" value="Change with Javascript" onclick="changeContent()" />
+		<input type="button" value="Change with Javascript"
+			onclick="changeContent()" />
 	</form>
 	<form>
-		<input type="button" value="Change with JQuery" onclick="changeContentWithJquery()" />
+		<input type="button" value="Change with JQuery"
+			onclick="changeContentWithJquery()" />
 	</form>
 	<form>
-		<input type="button" value="Change with Ajax" onclick="changeContentWithAjax()" />
+		<input type="button" value="Change with Ajax"
+			onclick="changeContentWithAjax()" />
 	</form>
+	<hr>
+	<h3>Change CSS</h3>
+	<p id="mycontent2">Sample text 1</p>
+	<form>
+		<input type="button" value="Change CSS with Javascript"
+			onclick="changeCSSWithJavascript()" />
+	</form>
+	<p id="mycontent3">Sample text 2</p>
+	<form>
+		<input type="button" value="Change CSS with JQuery"
+			onclick="changeCSSWithJQuery()" />
+	</form>
+
 </body>
 </html>
