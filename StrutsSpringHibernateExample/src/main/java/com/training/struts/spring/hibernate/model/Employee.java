@@ -33,7 +33,7 @@ public class Employee {
 	@Column(name = "TELEPHONE")
 	private String telephone;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "employee", cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "employee", cascade = CascadeType.ALL)
 	private List<Address> addressList;
 
 	// Setters and Getters
