@@ -39,4 +39,31 @@ public class SecurityConfiguation {
 		factory.setUserDetailsContextMapper(new PersonContextMapper());
 		return factory.createAuthenticationManager();
 	}
+	
+//	https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/ldap.html
+//	@Bean
+//	AuthenticationManager authenticationManager(BaseLdapPathContextSource contextSource) {
+//		LdapPasswordComparisonAuthenticationManagerFactory factory = new LdapPasswordComparisonAuthenticationManagerFactory(
+//				contextSource, new BCryptPasswordEncoder());
+//		factory.setUserDnPatterns("uid={0},ou=people");
+//		factory.setPasswordAttribute("userPassword");  
+//		return factory.createAuthenticationManager();
+//	}
+	
+//	@Bean
+//	LdapAuthoritiesPopulator authorities(BaseLdapPathContextSource contextSource) {
+//		String groupSearchBase = "";
+//		DefaultLdapAuthoritiesPopulator authorities =
+//			new DefaultLdapAuthoritiesPopulator(contextSource, groupSearchBase);
+//		authorities.setGroupSearchFilter("member={0}");
+//		return authorities;
+//	}
+//
+//	@Bean
+//	AuthenticationManager authenticationManager(BaseLdapPathContextSource contextSource, LdapAuthoritiesPopulator authorities) {
+//		LdapBindAuthenticationManagerFactory factory = new LdapBindAuthenticationManagerFactory(contextSource);
+//		factory.setUserDnPatterns("uid={0},ou=people");
+//		factory.setLdapAuthoritiesPopulator(authorities);
+//		return factory.createAuthenticationManager();
+//	}
 }
