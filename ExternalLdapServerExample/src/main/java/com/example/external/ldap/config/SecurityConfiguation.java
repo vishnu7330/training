@@ -24,7 +24,7 @@ public class SecurityConfiguation {
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/admin").hasRole("ADMIN").antMatchers("/*")
+		http.authorizeRequests().antMatchers("/admin").hasAuthority("ROLE_ADMIN").antMatchers("/*")
 				.hasAnyRole("ADMIN", "EDITOR", "PUBLISHER").anyRequest().authenticated().and().formLogin();
 		return http.build();
 	}

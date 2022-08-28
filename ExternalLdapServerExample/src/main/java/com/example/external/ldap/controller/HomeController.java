@@ -1,7 +1,12 @@
 package com.example.external.ldap.controller;
 
+import java.security.Principal;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,5 +25,23 @@ public class HomeController {
 	@GetMapping("/admin")
 	public String admin() {
 		return "Admin";
+	}
+	
+	@GetMapping("/principal")
+	public String currentUserName(Principal principal) {
+        return principal.getName();
+    }
+	
+	@GetMapping("/authentication")
+	public String currentUserName(Authentication authentication) {
+		UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+		System.out.println("User has authorities: " + userDetails.getAuthorities());
+        return authentication.getName();
+    }
+	
+	@GetMapping("/servletRequest")
+	public String currentUserNameSimple(HttpServletRequest request) {
+		Principal principal = request.getUserPrincipal();
+		return principal.getName();
 	}
 }
