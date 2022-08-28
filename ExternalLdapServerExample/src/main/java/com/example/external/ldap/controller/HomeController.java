@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,9 @@ public class HomeController {
 
 	@Autowired
 	private AuthenticationFacade authenticationFacade;
+
+	@Autowired
+	BCryptPasswordEncoder passwordEncoder;
 
 	@GetMapping("/hello")
 	public String hello() {
@@ -31,6 +35,7 @@ public class HomeController {
 	@GetMapping("/admin")
 	public String admin() {
 		Authentication authentication = authenticationFacade.getAuthentication();
+		System.out.println(passwordEncoder.encode("portal"));
 		return "Admin, Name: " + authentication.getName();
 	}
 
