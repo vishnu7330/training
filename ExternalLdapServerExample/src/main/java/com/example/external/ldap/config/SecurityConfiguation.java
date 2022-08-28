@@ -32,10 +32,10 @@ public class SecurityConfiguation {
 	public LdapContextSource contextSource() {
 		LdapContextSource contextSource = new LdapContextSource();
 
-		contextSource.setUrl(env.getRequiredProperty("spring.ldap.url"));
-		contextSource.setBase(env.getRequiredProperty("spring.ldap.base"));
-		contextSource.setUserDn(env.getRequiredProperty("spring.ldap.username"));
-		contextSource.setPassword(env.getRequiredProperty("spring.ldap.password"));
+		contextSource.setUrl(env.getRequiredProperty("ldap.url"));
+		contextSource.setBase(env.getRequiredProperty("ldap.base"));
+		contextSource.setUserDn(env.getRequiredProperty("ldap.username"));
+		contextSource.setPassword(env.getRequiredProperty("ldap.password"));
 
 		return contextSource;
 	}
