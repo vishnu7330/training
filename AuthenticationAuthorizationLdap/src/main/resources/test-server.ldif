@@ -11,4 +11,4 @@ objectclass: inetOrgPerson
 cn: Ben Alex
 sn: Alex
 uid: ben
-userPassword: password
+userPassword: $2a$10$bdAPZi/CiottAdgUPdbyfOr7TqLEvkKIVGUvNr8/PhDKgM4.eRzja
