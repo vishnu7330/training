@@ -1,0 +1,68 @@
+version: 1
+
+dn: uid=tamil,ou=people,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Tamil
+sn: Selvan
+uid: tamil
+userPassword:: e1NTSEF9bHBsWFZTOHJWV0dkeVZ4MjRpMzBMeE0yVXNzbFVpK3Jsb2NkdWc9P
+ Q==
+
+dn: cn=PUBLISHER,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: PUBLISHER
+member: uid=testuser,ou=people,dc=example,dc=com
+
+dn: cn=EDITOR,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: EDITOR
+member: uid=tamil,ou=people,dc=example,dc=com
+
+dn: dc=example,dc=com
+objectclass: domain
+objectclass: top
+dc: example
+
+dn: ou=groups,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: cn=ADMIN,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: ADMIN
+member: uid=ben,ou=people,dc=example,dc=com
+
+dn: ou=people,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: people
+
+dn: uid=ben,ou=people,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Ben
+sn: Stocks
+uid: ben
+userPassword:: e1NTSEF9Y2VtZEZFWnhsNU1rZ0tSS0l1eXMyNVNpNkZsekZKYUFJMENWbVE9P
+ Q==
+
+dn: uid=testuser,ou=people,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: John
+sn: Joseph
+uid: testuser
+userPassword:: e1NTSEF9dktkNlRHZWpISEpQdTNaaU5WbjBLVmwxWHlhbDF5eXlHOU1aa0E9P
+ Q==
+
