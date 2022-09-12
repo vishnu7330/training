@@ -81,4 +81,3 @@ UNION
 SELECT Orders.id, Customers.name, Orders.order_date
 FROM Orders
 RIGHT JOIN Customers ON Orders.customer_id=Customers.id;
-
