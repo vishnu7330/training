@@ -1,0 +1,1 @@
+http://localhost:8080/HTTPSessionExample/login?userName=John Joseph&userPassword=portal
