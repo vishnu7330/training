@@ -21,6 +21,7 @@ public class GarbageCollection {
 		new GarbageCollection().toString();
 
 		System.out.println("Calling System.gc()");
+		// no guarantee that Garbage collector will run always
 		System.gc();
 	}
 
