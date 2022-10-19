@@ -71,7 +71,7 @@ public class CollectionFramework {
 		System.out.println("after test method: " + dogs);
 	}
 
-
+	//more than one object passed to method
 	private static void addLastDog(Dog lastDog, List<Dog> dogs) {
 		dogs.add(lastDog);
 	}
