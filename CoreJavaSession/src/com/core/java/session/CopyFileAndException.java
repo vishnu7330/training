@@ -7,34 +7,38 @@ import java.io.IOException;
 
 public class CopyFileAndException {
 
-	public static void main(String args[])  {
-		
-		
-		CopyFileAndException testObject =  null;
-		
-		//testObject.testMethod();
-		
+	public static void main(String args[]) {
+
+		CopyFileAndException testObject = null;
+
+		// testObject.testMethod();
+
 		FileInputStream in = null;
 		FileOutputStream out = null;
 
 		try {
-			//reading
-			in = new FileInputStream("C:\\Users\\tamil\\git\\training\\CoreJavaSession\\src\\com\\core\\java\\session\\input.txt");
-			//writing
+			// reading
+			in = new FileInputStream(
+					"C:\\Users\\tamil\\git\\training\\CoreJavaSession\\src\\com\\core\\java\\session\\input.txt");
+			// writing
 			out = new FileOutputStream("output.txt");
 
 			int c;
 			while ((c = in.read()) != -1) {
 				out.write(c);
 			}
-			
-			//alternate way
-			//in.transferTo(out);
 
+			// alternate way
+			// in.transferTo(out);
+
+		} catch (FileNotFoundException fnfEx) {
+			fnfEx.printStackTrace();
+			System.out.println("Please provide a input.txt file");
 		} catch (IOException e) {
 			e.printStackTrace();
-			//based on the project requirement
-			System.out.println("Please provide a input.txt file");
+			System.out.println("Unknown Error");
+			// based on the project requirement
+
 		} finally {
 			if (in != null) {
 				try {
@@ -52,10 +56,16 @@ public class CopyFileAndException {
 			}
 		}
 		System.out.println("main method is exiting");
+		testMethod();
 	}
 
-	private void testMethod() {
-		// TODO Auto-generated method stub
-		
+	public static void testMethod() {
+
+		int x = 50;
+		int y = 0;
+
+//		System.out.println(x / y);
+//		throw new WebServiceNotAvailableException();
+
 	}
 }
