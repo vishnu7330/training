@@ -17,7 +17,7 @@ public class SAXParserExample {
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
 
-			// custom class *** NOT from SAX parser api
+			// custom class *** NOT from SAX parser api/library
 			SAXParserHandler handler = new SAXParserHandler();
 
 			// input file
