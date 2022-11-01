@@ -1,4 +1,4 @@
-package com.training.rest.web.service;
+package com.training.rest.web.controller;
 
 import java.util.List;
 
