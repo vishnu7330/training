@@ -1,3 +1,8 @@
+Zipkin
+======
 https://zipkin.io/pages/quickstart
+http://localhost:9411/zipkin/
 
+Hystrix Dashboard
+=================
 http://localhost:9295/hystrix  --> http://localhost:9191/actuator/hystrix.stream
