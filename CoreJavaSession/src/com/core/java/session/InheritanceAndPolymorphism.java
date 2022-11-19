@@ -45,7 +45,7 @@ public class InheritanceAndPolymorphism {
 		dog.animalSound();
 
 		/********* METHOD OVERLOADING **********/
-
+		//Compile time Polymorphism
 		animal.animalSound(5);
 		pig.animalSound(6);
 		dog.animalSound(7);

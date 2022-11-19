@@ -32,6 +32,11 @@ public class Animal{
 	public void animalSound(int age) {
 		System.out.println("The animal makes a sound, age is " + age);
 	}
+	
+	/* method overloading */
+	public void animalSound(String name, int age) {
+		System.out.println("The animal makes a sound, age is " + age);
+	}
 
 	// getters and setters
 
