@@ -5,8 +5,8 @@ public class WrapperClasses {
 	public static void main(String[] args) {
 
 		// int myInt = 5;
-		Integer myInt = Integer.valueOf(5);
-
+		Integer myInteger = Integer.valueOf(5);
+		
 		// double myDouble = 5.99;
 		Double myDouble = 5.99;
 
@@ -16,7 +16,7 @@ public class WrapperClasses {
 		// boolean flag = true;
 		Boolean flag = true;
 
-		System.out.println("int value from Integer Wrapper -> " + myInt.intValue());
+		System.out.println("int value from Integer Wrapper -> " + myInteger.intValue());
 
 		System.out.println("double value from Double Wrapper -> " + myDouble.doubleValue());
 
@@ -24,7 +24,7 @@ public class WrapperClasses {
 
 		System.out.println("boolean value from Boolean Wrapper -> " + flag.booleanValue());
 		
-		int intValue = myInt.intValue();
+		int intValue = myInteger.intValue();
 		
 		// flag.booleanValue() return type is boolean
 		boolean test = flag.booleanValue();
