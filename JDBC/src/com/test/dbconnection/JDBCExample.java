@@ -10,7 +10,7 @@ import java.sql.Statement;
 
 public class JDBCExample {
 
-	private static final String SQL_INSERT = "INSERT INTO EMP (PersonID, LastName, FirstName, Address, City)"
+	private static final String SQL_INSERT = "INSERT INTO EMPLOYEE (PersonID, LastName, FirstName, Address, City)"
 			+ "VALUES(?, ?, ?, ?, ?);";
 
 	public static void main(String[] args) {
