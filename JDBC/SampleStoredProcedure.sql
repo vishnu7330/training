@@ -1,4 +1,4 @@
 CREATE PROCEDURE GetAllEmployees()
 BEGIN
-	SELECT *  FROM emp;
+	SELECT *  FROM employee;
 END
