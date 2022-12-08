@@ -23,19 +23,19 @@ public class JDBCWithTransaction {
 			con.setAutoCommit(false);
 
 			// ************ Using Prepared Statement *************//
-			PreparedStatement prepStmt = con.prepareStatement(SQL_INSERT);
-			prepStmt.setInt(1, 1001);
-			prepStmt.setString(2, "Joseph");
-			prepStmt.setString(3, "John");
-			prepStmt.setString(4, "USA");
-			prepStmt.setString(5, "New York");
+			PreparedStatement prepStmt1 = con.prepareStatement(SQL_INSERT);
+			prepStmt1.setInt(1, 1003);
+			prepStmt1.setString(2, "Joseph");
+			prepStmt1.setString(3, "John");
+			prepStmt1.setString(4, "USA");
+			prepStmt1.setString(5, "New York");
 
-			prepStmt.execute();
+			prepStmt1.execute();
 			
 //			errorMethod();
 			
 			PreparedStatement prepStmt2 = con.prepareStatement(SQL_INSERT);
-			prepStmt2.setInt(1, 1002);
+			prepStmt2.setInt(1, 1004);
 			prepStmt2.setString(2, "Mike");
 			prepStmt2.setString(3, "Sherrard");
 			prepStmt2.setString(4, "USA");
@@ -45,7 +45,10 @@ public class JDBCWithTransaction {
 			
 			// commit the changes
 			con.commit();
-			System.out.println("Row inserted");
+			System.out.println("Rows inserted");
+			
+			//enable for other queries in the project
+//			con.setAutoCommit(true);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
