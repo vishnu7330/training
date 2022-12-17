@@ -20,7 +20,8 @@
 			<div class="banner">
 				<h2>Best Engineering College</h2>
 			</div>
-			<div class="examinations">
+			<!-- Assignment: Add "results" css class to following <div> and also in style.css-->
+			<div>
 				<h2>Results</h2>
 
 				<form id="form">
