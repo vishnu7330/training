@@ -153,6 +153,40 @@ ul {
     color: var(--black3);
 }
 
+.results
+{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+
+.results h2
+{
+    color: var(--blue);
+    text-align: center;
+}
+
+.resultheader 
+{
+    color: var(--blue);
+    font-size: 20px;
+}
+
+.results table, thead, td
+{
+    border-collapse:collapse;
+    border-bottom: 1px solid var(--black2);
+}
+
+.results table tbody
+{
+    color: var(--black3);
+}
+
 .login
 {
     width: 100%;

@@ -20,8 +20,7 @@
 			<div class="banner">
 				<h2>Best Engineering College</h2>
 			</div>
-			<!-- Assignment: Add "results" css class to following <div> and also in style.css-->
-			<div>
+			<div class="results">
 				<h2>Results</h2>
 
 				<form id="form">
@@ -36,7 +35,7 @@
 				</div>
 
 				<table>
-					<thead>
+					<thead class="resultheader">
 						<tr>
 							<td>Subject</td>
 							<td>Score</td>
