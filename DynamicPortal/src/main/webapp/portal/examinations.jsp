@@ -23,7 +23,7 @@
 			<div class="examinations">
 
 				<h2>Examinations</h2>
-				<table class="examinationstable">
+				<table>
 					<thead class="examinationheader">
 						<tr>
 							<td>S. No</td>

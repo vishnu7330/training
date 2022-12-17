@@ -34,7 +34,7 @@
 					</br> <label class="name">Name: N. Pratik</label>
 				</div>
 
-				<table class="examinationstable">
+				<table>
 					<thead>
 						<tr>
 							<td>Subject</td>

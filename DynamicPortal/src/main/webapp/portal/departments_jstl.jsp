@@ -36,7 +36,7 @@
 			<div class="departments">
 
 				<h2>Departments</h2>
-				<table class="departmentstable">
+				<table>
 					<thead class="departmentheader">
 						<tr>
 							<td>S. No</td>
