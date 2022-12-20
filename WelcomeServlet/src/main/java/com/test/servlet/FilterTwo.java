@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(filterName = "filterTwo", urlPatterns = "/msg/*", servletNames = "WelcomeServlet")
+@WebFilter(filterName = "filterTwo", urlPatterns = "/msg/*", servletNames = { "WelcomeServlet", "ForwadedServlet" })
 public class FilterTwo implements Filter {
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {

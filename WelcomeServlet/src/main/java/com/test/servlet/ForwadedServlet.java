@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ForwadedServlet
  */
-@WebServlet("/forward")
+@WebServlet(name = "ForwadedServlet", urlPatterns = {"/forward"})
 public class ForwadedServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
