@@ -13,6 +13,7 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>departments.jsp</welcome-file>
 	</welcome-file-list>
+	<!-- 
 	<security-constraint>
 		<display-name>SecurityConstraint</display-name>
 		<web-resource-collection>
@@ -36,4 +37,5 @@
 	<security-role>
 		<role-name>loginUser</role-name>
 	</security-role>
+	 -->
 </web-app>
