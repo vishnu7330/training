@@ -4,23 +4,23 @@ public class StringAndStringBuffer {
 
 	public static void main(String[] args) {
 
-		StringBuffer str = new StringBuffer("Hello Bay Area ");
-		int len = str.length();
+		StringBuffer buffer = new StringBuffer("Hello Bay Area ");
+		int len = buffer.length();
 		System.out.println("Length : " + len);
 
-		int cap = str.capacity();
+		int cap = buffer.capacity();
 		System.out.println("Capacity : " + cap);
 
 		for (int i = 0; i < 100; i++) {
-			str.append(i);
+			buffer.append(i);
 		}
 
-		System.out.println("Content: " + str.toString());
+		System.out.println("Content: " + buffer.toString());
 
-		len = str.length();
+		len = buffer.length();
 		System.out.println("Length : " + len);
 
-		cap = str.capacity();
+		cap = buffer.capacity();
 		System.out.println("Capacity : " + cap);
 
 		stringBufferMethods();
