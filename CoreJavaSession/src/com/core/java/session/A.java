@@ -5,6 +5,7 @@ public class A {
 
 	private int z;
 	
+	//sample method
 	public String getMessage() {
 		return "Method from Parent class";
 	}
