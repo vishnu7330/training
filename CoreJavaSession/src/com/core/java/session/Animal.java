@@ -13,13 +13,13 @@ public class Animal{
 
 	}
 
-	// Overloaded Constructor
+	// Overloaded Constructor 1
 	public Animal(String name) {
 		this.name = name;
 	}
 
 	/** super class constructor **/
-	// Overloaded Constructor
+	// Overloaded Constructor 2
 	public Animal(int age) {
 		this.age = age;
 	}
