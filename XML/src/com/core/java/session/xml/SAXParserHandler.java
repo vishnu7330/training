@@ -10,16 +10,16 @@ public class SAXParserHandler extends DefaultHandler {
 
 	private StringBuilder currentValue = new StringBuilder();
 
-	List<Student> result;
+	List<Student> students;
 	Student currentStudent;
 
-	public List<Student> getResult() {
-		return result;
+	public List<Student> getStudents() {
+		return students;
 	}
 
 	@Override
 	public void startDocument() {
-		result = new ArrayList<Student>();
+		students = new ArrayList<Student>();
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class SAXParserHandler extends DefaultHandler {
 
 		// end of loop
 		if (qName.equalsIgnoreCase("student")) {
-			result.add(currentStudent);
+			students.add(currentStudent);
 		}
 
 	}

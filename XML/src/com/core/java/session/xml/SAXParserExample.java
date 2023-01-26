@@ -25,8 +25,8 @@ public class SAXParserExample {
 			saxParser.parse(input, handler);
 
 			// print all
-			List<Student> result = handler.getResult();
-			result.forEach(System.out::println);
+			List<Student> students = handler.getStudents();
+			students.forEach(System.out::println);
 
 		} catch (Exception e) {
 			e.printStackTrace();
