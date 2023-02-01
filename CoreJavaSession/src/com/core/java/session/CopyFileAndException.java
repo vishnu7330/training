@@ -55,8 +55,11 @@ public class CopyFileAndException {
 				}
 			}
 		}
+
 		System.out.println("main method is exiting");
+
 		testMethod();
+
 	}
 
 	public static void testMethod() {
@@ -65,7 +68,7 @@ public class CopyFileAndException {
 		int y = 0;
 
 //		System.out.println(x / y);
-//		throw new WebServiceNotAvailableException();
+		throw new WebServiceNotAvailableException();
 
 	}
 }
