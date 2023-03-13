@@ -12,9 +12,9 @@ public class Arrays {
 		}
 
 		// array initialization with objects
-		Dog dog1 = new Dog(5);
-		Dog dog2 = new Dog(10);
-		Dog dog3 = new Dog(20);
+		Dog dog1 = new Dog("Puppy", 5);
+		Dog dog2 = new Dog("Johnny", 10);
+		Dog dog3 = new Dog("Rosi", 20);
 
 		Animal[] animals = { dog1, dog2, dog3 };
 
