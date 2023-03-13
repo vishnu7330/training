@@ -22,7 +22,7 @@ public class Arrays {
 		// Animal[] animals = { new Dog(5), new Dog(10), new Dog(20) };
 
 		for (int i = 0; i < animals.length; i++) {
-			System.out.println(" Array index i = " + i + " age = " + animals[i].getAge());
+			System.out.println(" Array index i = " + i + " Name = " + animals[i].getName());
 		}
 
 		// Multi dimentional arrays example
