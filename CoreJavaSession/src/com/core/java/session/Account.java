@@ -3,6 +3,7 @@ package com.core.java.session;
 //Bank Account Information
 public abstract class Account {
 
+	//balance amount
 	private int balance;
 	public static final int interestRate = 10;
 
