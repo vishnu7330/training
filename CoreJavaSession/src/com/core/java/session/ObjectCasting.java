@@ -1,5 +1,6 @@
 package com.core.java.session;
 
+// Example for type casting
 public class ObjectCasting extends A {
 
 	public static void main(String[] args) {
